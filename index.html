@@ -260,15 +260,17 @@
     }
 
     /* FIXED IMAGE HOLDER */
-    .hero-photo-frame {
-      position: relative;
-      width: 380px;
-      height: 480px;
-      overflow: hidden;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-    }
-
+  .hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Forces the image to fill the entire box */
+  object-position: center top;
+  position: relative;
+  z-index: 1;
+  display: block; 
+  transition: transform 0.4s ease;
+  background: #ffffff; /* Gives a clean white backdrop */
+}
     .hero-photo-frame::before {
       content: '';
       position: absolute;
