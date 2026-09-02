@@ -22,22 +22,47 @@
     --text-dim: #5a4d52;
     --border: rgba(232,180,196,0.12);
     --border2: rgba(232,180,196,0.06);
+    --surface-alpha: rgba(14,12,13,0.85);
+    --overlay-alpha: rgba(14,12,13,0.97);
+    --text-soft: rgba(240,234,236,0.55);
+    --text-softer: rgba(240,234,236,0.65);
+    --text-softest: rgba(240,234,236,0.45);
     --serif: 'Cormorant Garamond', Georgia, serif;
     --sans: 'Outfit', sans-serif;
   }
+
+
+ /* Light theme — applied to body.light-theme */
+body.light-theme {
+  --bg: #f5f0ec;
+  --bg2: #ede6e0;
+  --bg3: #e2d8d0;
+  --bg4: #d5c9bf;
+  --blush: #c4849a;
+  --blush-dim: #a86a80;
+  --blush-faint: rgba(196,132,154,0.10);
+  --blush-faint2: rgba(196,132,154,0.18);
+  --text: #1a1416;
+  --text-muted: #5a4a50;
+  --text-dim: #8a7a80;
+  --border: rgba(90,74,80,0.15);
+  --border2: rgba(90,74,80,0.07);
+  --surface-alpha: rgba(245,240,236,0.88);
+  --overlay-alpha: rgba(245,240,236,0.98);
+  --text-soft: rgba(26,20,22,0.78);
+  --text-softer: rgba(26,20,22,0.82);
+  --text-softest: rgba(26,20,22,0.68);
+}
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   html { scroll-behavior: smooth; }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+ body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
 
   ::selection { background: rgba(232,180,196,0.25); color: var(--text); }
 
@@ -55,7 +80,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(14,12,13,0.85);
+    gap: 1.5rem;
+    background: var(--surface-alpha);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border2);
   }
@@ -72,6 +98,7 @@
   .nav-links {
     display: flex;
     gap: 2.5rem;
+    align-items: center;
     list-style: none;
   }
 
@@ -181,7 +208,7 @@
     font-size: 1.25rem;
     font-weight: 300;
     font-style: italic;
-    color: rgba(240,234,236,0.55);
+    color: var(--text-soft);
     margin-bottom: 3rem;
     line-height: 1.5;
     max-width: 400px;
@@ -277,7 +304,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 60% 30%, rgba(232,180,196,0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 60% 30%, var(--blush-faint) 0%, transparent 70%);
   }
 
   .photo-icon {
@@ -368,7 +395,7 @@
   }
 
   .about-text p {
-    color: rgba(240,234,236,0.65);
+    color: var(--text-softer);
     font-size: 0.95rem;
     line-height: 1.9;
     margin-bottom: 1.5rem;
@@ -432,7 +459,7 @@
     font-family: var(--serif);
     font-size: 1.05rem;
     font-style: italic;
-    color: rgba(240,234,236,0.75);
+    color: var(--text-softer);
     line-height: 1.7;
     padding-top: 0.5rem;
   }
@@ -493,7 +520,7 @@
 
   .comp-list li {
     font-size: 0.88rem;
-    color: rgba(240,234,236,0.6);
+    color: var(--text-soft);
     padding-left: 1rem;
     position: relative;
   }
@@ -541,7 +568,7 @@
 
   .sw-bar-track {
     height: 2px;
-    background: rgba(232,180,196,0.1);
+    background: var(--blush-faint2);
     position: relative;
   }
 
@@ -583,7 +610,7 @@
 
   .software-note p {
     font-size: 0.88rem;
-    color: rgba(240,234,236,0.55);
+    color: var(--text-soft);
     line-height: 1.9;
     margin-bottom: 1rem;
   }
@@ -664,7 +691,7 @@
 
   .wf-step-desc {
     font-size: 0.78rem;
-    color: rgba(240,234,236,0.45);
+    color: var(--text-softest);
     line-height: 1.6;
   }
 
@@ -695,7 +722,7 @@
 
   .wf-principle p {
     font-size: 0.82rem;
-    color: rgba(240,234,236,0.55);
+    color: var(--text-soft);
     line-height: 1.7;
   }
 
@@ -802,7 +829,7 @@
 
   .value-item-text p {
     font-size: 0.85rem;
-    color: rgba(240,234,236,0.5);
+    color: var(--text-soft);
     line-height: 1.7;
   }
 
@@ -833,7 +860,7 @@
 
   .career-objective p {
     font-size: 0.88rem;
-    color: rgba(240,234,236,0.55);
+    color: var(--text-soft);
     line-height: 1.9;
     margin-bottom: 1.5rem;
   }
@@ -876,7 +903,7 @@
 
   .contact-left p {
     font-size: 0.9rem;
-    color: rgba(240,234,236,0.5);
+    color: var(--text-soft);
     line-height: 1.8;
     margin-bottom: 2.5rem;
   }
@@ -941,7 +968,7 @@
 
   .avail-item {
     font-size: 0.85rem;
-    color: rgba(240,234,236,0.6);
+    color: var(--text-soft);
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -1013,12 +1040,13 @@
   .nav-burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
   @media (max-width: 640px) {
+    .theme-toggle { width: 34px; height: 34px; flex-shrink: 0; position: relative; z-index: 201; }
     .nav-burger { display: flex; }
     .nav-links {
       display: none;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(14,12,13,0.97);
+      background: var(--overlay-alpha);
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -1169,8 +1197,8 @@
       align-items: flex-start;
       gap: 0.1rem;
       padding: 0.7rem 1rem !important;
-      background: rgba(14,12,13,0.9) !important;
-      border: 1px solid rgba(232,180,196,0.2) !important;
+      background: var(--surface-alpha) !important;
+      border: 1px solid var(--border) !important;
       width: auto !important;
       margin: 0 !important;
       z-index: 10;
@@ -1256,6 +1284,45 @@
     .workflow-steps { grid-template-columns: repeat(2, 1fr); }
     .btn-primary, .btn-ghost { padding: 0.8rem 1rem; font-size: 0.72rem; }
   }
+
+  /* Minimal Theme Toggle */
+.theme-toggle {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin-left: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--blush);
+  opacity: 0.85;
+}
+
+.theme-toggle:focus-visible {
+  outline: 1px solid var(--blush-dim);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+  .theme-toggle {
+    width: 24px;
+    height: 24px;
+    margin-left: 0.2rem;
+    font-size: 0.85rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -1270,6 +1337,9 @@
     <li><a href="#workflow" onclick="closeNav()">Workflow</a></li>
     <li><a href="#contact" onclick="closeNav()">Connect</a></li>
   </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Switch to light theme">
+    <span id="themeIcon" aria-hidden="true">☀️</span>
+  </button>
   <button class="nav-burger" id="navBurger" aria-label="Toggle menu" onclick="toggleNav()">
     <span></span><span></span><span></span>
   </button>
@@ -1281,7 +1351,7 @@
   <div class="hero-inner">
     <div class="hero-content fade-up">
       <p class="hero-label">Dental Technologist</p>
-      <h1 class="hero-name">Muskan<br><span>.K</span></h1>
+      <h1 class="hero-name">Muskan<span> .K</span></h1>
       <p class="hero-title">CAD/CAM Designer &amp; Prosthetics Specialist</p>
       <p class="hero-tagline">Precision in Dentistry.<br>Excellence in Digital Craftsmanship.</p>
       <div class="hero-ctas">
@@ -1354,7 +1424,6 @@
         </div>
         <ul class="comp-list">
           <li>Crown &amp; Bridge Design</li>
-          <li>Full Contour Restorations</li>
           <li>Smile Design Concepts</li>
           <li>Digital Denture Workflow</li>
           <li>Implant Restoration Basics</li>
@@ -1634,15 +1703,15 @@
           <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:280px; position:relative; z-index:1;">
             <g transform="translate(10,10)">
               <!-- Tooth outline shape -->
-              <path d="M60,20 C60,20 45,15 38,28 C31,41 34,58 40,68 C46,78 52,90 58,105 C62,115 68,120 75,115 C80,110 82,95 88,85 C94,75 105,80 108,70 C115,55 118,40 112,27 C106,14 92,10 80,14 C75,16 70,18 65,18 Z" fill="none" stroke="#c4849a" stroke-width="1.2" opacity="0.7"/>
+              <path d="M60,20 C60,20 45,15 38,28 C31,41 34,58 40,68 C46,78 52,90 58,105 C62,115 68,120 75,115 C80,110 82,95 88,85 C94,75 105,80 108,70 C115,55 118,40 112,27 C106,14 92,10 80,14 C75,16 70,18 65,18 Z" fill="none" stroke="var(--blush-dim)" stroke-width="1.2" opacity="0.7"/>
               <!-- Stylized M signature -->
-              <path d="M42,85 C42,85 50,40 62,55 C68,62 72,70 80,58 C88,46 92,38 98,55 C104,72 108,85 108,85" fill="none" stroke="#e8b4c4" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M42,85 C42,85 50,40 62,55 C68,62 72,70 80,58 C88,46 92,38 98,55 C104,72 108,85 108,85" fill="none" stroke="var(--blush)" stroke-width="1.8" stroke-linecap="round"/>
               <!-- Underline flourish -->
-              <path d="M38,92 Q75,100 112,92" fill="none" stroke="#c4849a" stroke-width="0.8" opacity="0.6"/>
+              <path d="M38,92 Q75,100 112,92" fill="none" stroke="var(--blush-dim)" stroke-width="0.8" opacity="0.6"/>
             </g>
-            <text x="148" y="68" font-family="'Cormorant Garamond', serif" font-size="36" font-weight="300" fill="#f0eaec" letter-spacing="1">Muskan K</text>
-            <text x="150" y="90" font-family="'Outfit', sans-serif" font-size="10" font-weight="300" fill="#8a7880" letter-spacing="2.5">Dental Technologist</text>
-            <text x="150" y="108" font-family="'Outfit', sans-serif" font-size="10" font-weight="300" fill="#8a7880" letter-spacing="2.5">&amp; CAD/CAM Designer</text>
+            <text x="148" y="68" font-family="'Cormorant Garamond', serif" font-size="36" font-weight="300" fill="var(--text)" letter-spacing="1">Muskan K</text>
+            <text x="150" y="90" font-family="'Outfit', sans-serif" font-size="10" font-weight="300" fill="var(--text-muted)" letter-spacing="2.5">Dental Technologist</text>
+            <text x="150" y="108" font-family="'Outfit', sans-serif" font-size="10" font-weight="300" fill="var(--text-muted)" letter-spacing="2.5">&amp; CAD/CAM Designer</text>
           </svg>
           <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:0.85rem; color:var(--text-dim); margin-top:2rem; text-align:center; position:relative; z-index:1;">
             "Focused on precision. Ready for high-standard labs."
@@ -1698,6 +1767,30 @@
 
   document.querySelectorAll('.sw-bar-fill').forEach(b => b.style.animationPlayState = 'paused');
   if (swSection) barObserver.observe(swSection);
+
+
+  // ===== THEME TOGGLE =====
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    const isLight = theme === 'light';
+    document.body.classList.toggle('light-theme', isLight);
+    themeIcon.textContent = isLight ? '☾' : '☼';
+    themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+    themeToggle.setAttribute('title', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+  }
+
+  const savedTheme = localStorage.getItem('theme');
+  const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  applyTheme(initialTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+    applyTheme(nextTheme);
+    localStorage.setItem('theme', nextTheme);
+  });
 </script>
+
 </body>
 </html>
