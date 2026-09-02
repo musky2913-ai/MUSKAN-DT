@@ -260,25 +260,25 @@
     }
 
     /* FIXED IMAGE HOLDER */
- .hero-photo-frame img {
+.hero-photo-frame img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  max-width: 480px; /* Prevents it from growing too big */
+  height: auto;
+  object-fit: contain;
+  object-position: center;
   position: relative;
   z-index: 1;
   display: block; 
   transition: transform 0.4s ease;
-  /* background removed completely */
 }
  
-  .hero-photo-frame {
+.hero-photo-frame {
   position: relative;
-  width: 380px;
-  height: 480px;
-  overflow: hidden;
-  /* background removed completely */
-  border: 1px solid var(--border); /* Keep the dark pink border so it doesn't look like a floating PNG */
+  width: auto; /* Let the image dictate its own width */
+  height: auto; /* Let the image dictate its own height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
     .hero-photo-frame img {
@@ -294,10 +294,10 @@
 
     .hero-photo-frame:hover img { transform: scale(1.02); }
 
-   .hero-stats {
+ .hero-stats {
   position: absolute;
-  bottom: -1.5rem;
-  left: -1.5rem;
+  bottom: 2rem; /* Place it over the image */
+  left: -2rem; /* Pull it slightly outside */
   background: var(--bg2);
   border: 1px solid var(--border);
   padding: 1rem 1.5rem;
