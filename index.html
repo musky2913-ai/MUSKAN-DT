@@ -114,190 +114,181 @@
     }
 
     /* =================== HERO =================== */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: 0;
-    }
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
 
-    .hero-bg-text {
-      position: absolute;
-      top: 50%;
-      left: -2%;
-      transform: translateY(-50%);
-      font-family: var(--serif);
-      font-size: clamp(120px, 18vw, 220px);
-      font-weight: 600;
-      color: rgba(232,180,196,0.035);
-      white-space: nowrap;
-      pointer-events: none;
-      user-select: none;
-      letter-spacing: -0.02em;
-      z-index: 0;
-    }
+.hero-bg-text {
+  position: absolute;
+  top: 50%;
+  left: -2%;
+  transform: translateY(-50%);
+  font-family: var(--serif);
+  font-size: clamp(120px, 18vw, 220px);
+  font-weight: 600;
+  color: rgba(232,180,196,0.035);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.02em;
+  z-index: 0;
+}
 
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 3rem;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 4rem;
-      align-items: center;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    .hero-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--blush-dim);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .hero-label::before {
-      content: '';
-      display: block;
-      width: 2rem;
-      height: 1px;
-      background: var(--blush-dim);
-    }
-
-    /* FIXED NAME FORMATTING */
-    .hero-name {
-      font-family: var(--serif);
-      font-size: clamp(3.5rem, 7vw, 6rem);
-      font-weight: 300;
-      line-height: 1.0;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-      white-space: nowrap; /* Forces it to stay on ONE line */
-    }
-
-    .hero-name span {
-      color: var(--blush);
-      font-style: italic;
-    }
-
-    .hero-title {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-    }
-
-    .hero-tagline {
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      font-weight: 300;
-      font-style: italic;
-      color: rgba(240,234,236,0.55);
-      margin-bottom: 2.5rem;
-      line-height: 1.5;
-      max-width: 400px;
-    }
-
-    .hero-ctas {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      padding: 0.75rem 2rem;
-      background: var(--blush);
-      color: #1a0c12;
-      font-family: var(--sans);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .btn-primary:hover { background: var(--blush-dim); transform: translateY(-2px); }
-
-    .btn-ghost {
-      padding: 0.75rem 2rem;
-      background: transparent;
-      color: var(--text-muted);
-      font-family: var(--sans);
-      font-size: 0.78rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      cursor: pointer;
-      transition: border-color 0.3s, color 0.3s;
-    }
-
-    .btn-ghost:hover { border-color: var(--blush-dim); color: var(--blush); }
-
-    .hero-photo-wrap {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    /* FIXED IMAGE HOLDER */
-.hero-photo-frame img {
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
   width: 100%;
-  max-width: 480px; /* Prevents it from growing too big */
-  height: auto;
-  object-fit: contain;
-  object-position: center;
   position: relative;
   z-index: 1;
-  display: block; 
-  transition: transform 0.4s ease;
 }
- 
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush-dim);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.hero-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--blush-dim);
+}
+
+.hero-name {
+  font-family: var(--serif);
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 300;
+  line-height: 1.0;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.hero-name span {
+  color: var(--blush);
+  font-style: italic;
+}
+
+.hero-title {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero-tagline {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(240,234,236,0.55);
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 0.75rem 2rem;
+  background: var(--blush);
+  color: #1a0c12;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover { background: var(--blush-dim); transform: translateY(-2px); }
+
+.btn-ghost {
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.btn-ghost:hover { border-color: var(--blush-dim); color: var(--blush); }
+
+/* FIXED IMAGE SECTION */
+.hero-photo-wrap {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .hero-photo-frame {
   position: relative;
-  width: auto; /* Let the image dictate its own width */
-  height: auto; /* Let the image dictate its own height */
+  width: 400px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-    .hero-photo-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* 'contain' is crucial for SVG/Transparent backgrounds so it doesn't crop the person! */
-      object-position: center;
-      position: relative;
-      z-index: 1;
-      display: block; 
-      transition: transform 0.4s ease;
-    }
+/* Remove the frame border effect entirely */
+.hero-photo-frame::before {
+  display: none;
+}
 
-    .hero-photo-frame:hover img { transform: scale(1.02); }
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes her fill the entire 400x500 area */
+  object-position: center top;
+  position: relative;
+  z-index: 1;
+  display: block; 
+  transition: transform 0.4s ease;
+  /* No background, no borders */
+}
 
- .hero-stats {
+.hero-stats {
   position: absolute;
-  bottom: 2rem; /* Place it over the image */
-  left: -2rem; /* Pull it slightly outside */
+  bottom: 1rem; 
+  left: -1.5rem; 
   background: var(--bg2);
   border: 1px solid var(--border);
   padding: 1rem 1.5rem;
