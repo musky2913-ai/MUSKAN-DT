@@ -32,28 +32,42 @@
                                                                                       }
 
 
-                                                                                       /* Light theme · applied to body.light-theme */
-                                                                                       body.light-theme {
-                                                                                         --bg: #f5f0ec;
-                                                                                           --bg2: #ede6e0;
-                                                                                             --bg3: #e2d8d0;
-                                                                                               --bg4: #d5c9bf;
-                                                                                                 --blush: #c4849a;
-                                                                                                   --blush-dim: #a86a80;
-                                                                                                     --blush-faint: rgba(196,132,154,0.10);
-                                                                                                       --blush-faint2: rgba(196,132,154,0.18);
-                                                                                                         --text: #1a1416;
-                                                                                                           --text-muted: #5a4a50;
-                                                                                                             --text-dim: #8a7a80;
-                                                                                                               --border: rgba(90,74,80,0.15);
-                                                                                                                 --border2: rgba(90,74,80,0.07);
-                                                                                                                   --surface-alpha: rgba(245,240,236,0.88);
-                                                                                                                     --overlay-alpha: rgba(245,240,236,0.98);
-                                                                                                                       --text-soft: rgba(26,20,22,0.78);
-                                                                                                                         --text-softer: rgba(26,20,22,0.82);
-                                                                                                                           --text-softest: rgba(26,20,22,0.68);
-                                                                                                                           }
-                                                                                                                           
+                                                                                     /* =========================================================
+   LIGHT THEME
+   Warm ivory · charcoal · muted rose
+   ========================================================= */
+
+body.light-theme {
+  /* Page surfaces */
+  --bg: #f7f3ef;
+  --bg2: #eee8e2;
+  --bg3: #e5ddd6;
+  --bg4: #d8cec6;
+
+  /* Accent */
+  --blush: #b96f87;
+  --blush-dim: #98566d;
+  --blush-faint: rgba(185, 111, 135, 0.08);
+  --blush-faint2: rgba(185, 111, 135, 0.14);
+
+  /* Typography */
+  --text: #211c1e;
+  --text-muted: #66595e;
+  --text-dim: #8a7a80;
+
+  /* Borders */
+  --border: rgba(48, 39, 43, 0.16);
+  --border2: rgba(48, 39, 43, 0.09);
+
+  /* Transparent surfaces */
+  --surface-alpha: rgba(247, 243, 239, 0.92);
+  --overlay-alpha: rgba(247, 243, 239, 0.98);
+
+  /* Secondary text */
+  --text-soft: rgba(33, 28, 30, 0.72);
+  --text-softer: rgba(33, 28, 30, 0.82);
+  --text-softest: rgba(33, 28, 30, 0.58);
+}                                                                                                              
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   html { scroll-behavior: smooth; }
